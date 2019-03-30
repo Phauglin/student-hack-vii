@@ -1,10 +1,11 @@
 import java.awt.*;
 import javax.swing.*;
-public  class Hack{
+public  class Hack extends JFrame{
 
     // Constructor
     public Hack(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Container contents = getContent
         pack();
     }
 
