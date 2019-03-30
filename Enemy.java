@@ -1,7 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Color;
 
-public class Enemy
+public class Tom
 {
     int xPos;
     int yPos;
@@ -10,7 +10,7 @@ public class Enemy
     int width = 50;
     int height = 50;
 
-    public Enemy(int x, int y)
+    public Tom(int x, int y)
     {
         xPos = x;
         yPos = y;
