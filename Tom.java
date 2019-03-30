@@ -7,8 +7,8 @@ public class Tom
     int yPos;
     int xSpeed = 5;
     int ySpeed = 1;
-    int width = 50;
-    int height = 50;
+    int width = 80;
+    int height = 190;
 
     public Tom(int x, int y)
     {
