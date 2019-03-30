@@ -21,7 +21,7 @@ public class Game extends JFrame{
         this.pack();
         this.setResizable(true);
         this.setVisible(true);
-        this.setTitle("Flappy Bird Knockoff");
+        this.setTitle("Tom and Jerry Game");
         layer.start();
         // dont touch main at all
     }
