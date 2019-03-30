@@ -9,6 +9,7 @@ public class GameController implements MouseListener, KeyListener
 {
 
   Player p = new Player();
+  Obstacle o = new Obstacle();
 
   public void update()
   {
@@ -67,6 +68,7 @@ public class GameController implements MouseListener, KeyListener
     g.setColor(Color.magenta);
     g.fillRect(0, 0, 1280, 720);
     p.render(g);
+    o.render(g);
   }
 
   @Override
@@ -115,7 +117,7 @@ public class GameController implements MouseListener, KeyListener
   @Override
   public void mouseClicked(MouseEvent arg0)
   {
-
+    
   }
 
 

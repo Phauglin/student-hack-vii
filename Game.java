@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
+import java.awt.Canvas;
+
 
 
 public class Game extends JFrame{
@@ -18,6 +20,9 @@ public class Game extends JFrame{
         this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         this.add(layer);
+        JFrame frame = new JFrame("My Drawing");
+        Drawing canvas = new Drawing();
+        frame.add(canvas);
         this.pack();
         this.setResizable(true);
         this.setVisible(true);
