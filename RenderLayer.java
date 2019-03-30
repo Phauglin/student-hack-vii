@@ -16,7 +16,7 @@ public class RenderLayer extends Canvas implements Runnable, KeyListener, MouseL
 
     ArrayList<Tom> enemies = new ArrayList<Tom>();
 
-    public RenderLayer() //dont touchhh
+    public RenderLayer() 
     {
         super();
         this.setSize(1080, 720);
