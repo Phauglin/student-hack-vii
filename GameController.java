@@ -5,8 +5,6 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
 
-
-
 public class GameController implements MouseListener, KeyListener
 {
 
@@ -14,7 +12,7 @@ public class GameController implements MouseListener, KeyListener
 
   public void update()
   {
-    System.out.println(p.ySpeed);
+    //System.out.println(p.ySpeed);
     p.ySpeed += p.gravity;
     p.update();
 
@@ -30,16 +28,14 @@ public class GameController implements MouseListener, KeyListener
 
     if(p.holdsA)
     {
-      p.xSpeed -= 0.5f;
+      p.xSpeed -= 0.5;
 
     }
 
     if(p.holdsD)
     {
-      p.xSpeed += 0.5f;
+      p.xSpeed += 0.5;
     }
-
-    p.xSpeed *= 0.8;
 
     if(p.xPos < 0)
     {
@@ -65,8 +61,6 @@ public class GameController implements MouseListener, KeyListener
       p.ySpeed = -p.ySpeed;
     }
   }
-
-
 
   public void render(Graphics g)
   {

@@ -37,7 +37,7 @@ public class Jerry extends JFrame
 
   public void setImage()
   {
-    setLayout(new FlowLayout ());
+    setLayout(new FlowLayout());
 
     image = new ImageIcon(getClass().getResource("jerry.jpg"));
     label = new JLabel(image);
