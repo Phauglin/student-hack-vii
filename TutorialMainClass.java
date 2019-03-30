@@ -2,13 +2,13 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
 
-public class TutorialMainClass extends JFrame{
+public class Game extends JFrame{
 
     private static final long serialVersionUID = 1L;
 
     public static void main(String[] args)
     {
-        TutorialMainClass game = new TutorialMainClass();
+        Game game = new Game();
         game.init();
     }
 
