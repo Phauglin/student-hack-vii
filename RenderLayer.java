@@ -8,11 +8,13 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 import java.util.ArrayList;
 
-public class RenderLayer extends Canvas implements Runnable, KeyListener, MouseListener
+public class RenderLayer extends Canvas implements Runnable
 {
     private static final long serialVersionUID = 1L; //dont touch
 
     long time;
+
+    GameController gmc = new GameController();
 
     ArrayList<Tom> enemies = new ArrayList<Tom>();
 
@@ -29,24 +31,18 @@ public class RenderLayer extends Canvas implements Runnable, KeyListener, MouseL
     {
       while (true)
         {
-            try
-            {
-				Thread.sleep(17);
-			} catch (InterruptedException e) {}
+          try
+          {
+      			Thread.sleep(17);
+      		} catch (InterruptedException e) {}
 
-            this.render();
-            this.update();
-            time = System.currentTimeMillis();
-        }
+          this.render();
+          gmc.update();
+          time = System.currentTimeMillis();
+      }
     }
 
-    private void update()
-    {
-    	for (Tom e : enemies)
-    	{
-    		e.update();
-    	}
-    }
+
     private void render()
     {
     	// dont touch start
@@ -62,13 +58,7 @@ public class RenderLayer extends Canvas implements Runnable, KeyListener, MouseL
         g.setColor(new Color(190,190,190)); // sets background clr
 
         // fillrect takes arguments: xPos, yPos, width, height
-
-        g.fillRect(0, 0, 1080, 720);
-        for (Tom e : enemies)
-        {
-        	e.render(g);
-        }
-
+        gmc.render(g);
         g.dispose(); //dt
         buffer.show(); // dt
 
