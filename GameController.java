@@ -12,7 +12,7 @@ public class GameController implements MouseListener, KeyListener
 
   Player p = new Player();
 
-  public void update()// hi
+  public void update()
   {
     System.out.println(p.ySpeed);
     p.ySpeed += p.gravity;

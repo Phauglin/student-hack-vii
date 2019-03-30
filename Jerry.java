@@ -35,7 +35,7 @@ public class Jerry extends JFrame
       yPos += ySpeed;
   }
 
-  public Image setImage()
+  public void setImage()
   {
     setLayout(new FlowLayout ());
 
