@@ -4,11 +4,10 @@ import java.awt.Color;
 
 public class Obstacle
 {
-  float xPos = (int)Math.random();
-  float yPos = (int)Math.random();
   int width = 50;
   int height = 50;
-
+  float xPos = (float)Math.random()*1280;
+  float yPos = (float)Math.random()*720;
 
   public void render (Graphics g)
   {

@@ -17,7 +17,7 @@ public class Game extends JFrame{
     private void init()
     {
         RenderLayer layer = new RenderLayer();
-        this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         this.add(layer);
         JFrame frame = new JFrame("My Drawing");
@@ -26,7 +26,7 @@ public class Game extends JFrame{
         this.pack();
         this.setResizable(true);
         this.setVisible(true);
-        this.setTitle("Tom and Jerry Game");
+        this.setTitle("Some game yeet");
         layer.start();
         // dont touch main at all
     }
