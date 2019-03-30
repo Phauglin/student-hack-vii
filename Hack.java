@@ -8,8 +8,8 @@ public class Hack extends JFrame
     {
         Container contents = getContentPane();
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        pack();
+        //setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //pack();
     }
 
     public static void main(String[] args)
@@ -17,5 +17,11 @@ public class Hack extends JFrame
         Hack hack= new Hack();
         hack.setSize(500, 300);
         hack.setVisible(true);
+
+        Jerry jerry = new Jerry();
+        jerry.setImage();
+
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        pack();
     }
 }
