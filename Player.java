@@ -9,6 +9,15 @@ public class Player
   int width = 50;
   int height = 50;
 
+  boolean holdsW = false;
+  boolean holdsA = false;
+  boolean holdsS = false;
+  boolean holdsD = false;
+
+  float xSpeed = 0;
+  float ySpeed = 0;
+  float gravity = 0.2f;
+
 
   public void render (Graphics g)
   {
@@ -22,6 +31,11 @@ public class Player
     yPos += dy;
   }
 
+  public void update()
+  {
+    xPos += xSpeed;
+    yPos += ySpeed;
+  }
 
 
 
