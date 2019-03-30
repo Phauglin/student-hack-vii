@@ -11,6 +11,7 @@ public class GameController implements MouseListener, KeyListener
 {
 
   Player p = new Player();
+  Obstacle o = new Obstacle();
 
   public void update()// hi
   {
@@ -121,7 +122,7 @@ public class GameController implements MouseListener, KeyListener
   @Override
   public void mouseClicked(MouseEvent arg0)
   {
-
+    Drawing.paint();
   }
 
 
