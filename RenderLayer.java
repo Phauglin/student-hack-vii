@@ -26,6 +26,7 @@ public class RenderLayer extends Canvas implements Runnable
     this.addKeyListener(gmc);
     this.addMouseListener(gmc);
   }
+  
   @Override
   public void run()
   {
