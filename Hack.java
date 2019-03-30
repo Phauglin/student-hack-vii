@@ -4,7 +4,8 @@ public class Hack extends JFrame
 {
 
     // Constructor
-    public Hack(){
+    public Hack()
+    {
         Container contents = getContentPane();
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);

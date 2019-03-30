@@ -18,7 +18,7 @@ public class RenderLayer extends Canvas implements Runnable
 
     ArrayList<Tom> enemies = new ArrayList<Tom>();
 
-    public RenderLayer() //dont touchhh
+    public RenderLayer() 
     {
         super();
         this.setSize(1080, 720);
