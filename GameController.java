@@ -72,7 +72,8 @@ public class GameController implements MouseListener, KeyListener
 
   public boolean isColliding()
   {
-    if(p.xPos <= o.xPos + o.height && p.yPos == o.yPos)
+    if((((p.xPos - 25) >= (o.xPos - 35)) && (o.xPos + 35) >= (p.xPos + 25))
+        && (((p.yPos - 25) >= (o.yPos - 35)) && (o.yPos + 35) >= (p.yPos + 25)) )//p.xPos <= o.xPos -25 + o.height && p.yPos == o.yPos)
       return true;
     else
       return false;
