@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 import java.awt.Font;
+import java.awt.Rectangle;
 
 public class GameController implements MouseListener, KeyListener
 {
@@ -23,6 +24,14 @@ public class GameController implements MouseListener, KeyListener
       o.yPos = (float)Math.random()*720;
       o.getObstacle().setLocation((int) o.xPos, (int) o.yPos);
       score++;
+      // Added new implementation
+      if(o.getWidth() > 10)
+        o.setWidth(o.getWidth() - 5);
+      if (o.getHeight() > 10)
+        o.setHeight(o.getHeight() - 5);
+
+      o.getObstacle().setSize(o.getWidth(), o.getHeight());
+
     }
     //System.out.println(p.ySpeed);
     p.ySpeed += p.gravity;

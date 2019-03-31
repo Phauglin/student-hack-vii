@@ -30,6 +30,26 @@ public class Obstacle
   {
     return r;
   }
+
+  public int getHeight()
+  {
+    return height;
+  }
+
+  public int getWidth()
+  {
+    return width;
+  }
+
+  public void setHeight(int newHeight)
+  {
+    height= newHeight;
+  }
+
+  public void setWidth(int newWidth)
+  {
+    width = newWidth;
+  }
 }
 
 

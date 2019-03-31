@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import java.awt.Canvas;
+import java.awt.*;
+import javax.swing.*;
 
 
 
@@ -10,8 +12,8 @@ public class Game extends JFrame{
 
     public static void main(String[] args)
     {
-        Game game = new Game();
-        game.init();
+      Game game = new Game();
+      game.init();
     }
 
     private void init()
