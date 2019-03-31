@@ -22,13 +22,14 @@ public class RenderLayer extends Canvas implements Runnable
 
   public RenderLayer()
   {
-    JLabel background;
     super();
+    JLabel background;
+
     this.setSize(1280, 720);
     time = System.currentTimeMillis();
     this.addKeyListener(gmc);
     this.addMouseListener(gmc);
-    ImageIcon img = new ImageIcon("");
+    ImageIcon img = new ImageIcon("golf3.jpg");
 
     background = new JLabel("", img, JLabel.CENTER);
     background.setBounds(0, 0, 1280, 720);
