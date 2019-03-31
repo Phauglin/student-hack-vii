@@ -18,6 +18,7 @@ public class GameController implements MouseListener, KeyListener
     {
       o.xPos = (float)Math.random()*1280;
       o.yPos = (float)Math.random()*720;
+      o.getObstacle().setLocation((int) o.xPos, (int) o.yPos);
     }
     //System.out.println(p.ySpeed);
     p.ySpeed += p.gravity;
@@ -72,11 +73,13 @@ public class GameController implements MouseListener, KeyListener
 
   public boolean isColliding()
   {
-    if((((p.xPos - 25) >= (o.xPos - 35)) && (o.xPos + 35) >= (p.xPos + 25))
-        && (((p.yPos - 25) >= (o.yPos - 35)) && (o.yPos + 35) >= (p.yPos + 25)) )//p.xPos <= o.xPos -25 + o.height && p.yPos == o.yPos)
-      return true;
-    else
-      return false;
+    //if((((p.xPos - 25) >= (o.xPos - 35)) && (o.xPos + 35) >= (p.xPos + 25))
+        //&& (((p.yPos - 25) >= (o.yPos - 35)) && (o.yPos + 35) >= (p.yPos + 25)) )//p.xPos <= o.xPos -25 + o.height && p.yPos == o.yPos)
+      //return true;
+    //else
+      //return false;
+
+      return p.getPlayer().intersects(o.getObstacle());
   }
 
   public void render(Graphics g)

@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Color;
-
+import java.awt.Rectangle;
+import java.awt.Graphics2D;
 
 public class Player
 {
@@ -18,9 +19,12 @@ public class Player
   float ySpeed = 0;
   float gravity = 0.2f;
 
-
+  Rectangle r2 = new Rectangle((int) xPos, (int) yPos, width, height);
   public void render (Graphics g)
   {
+    Graphics2D g2D = (Graphics2D) g;
+    g.setColor(Color.WHITE);
+    g2D.draw(r2);
     g.setColor(Color.BLUE);
     g.fillRect((int)xPos, (int)yPos, width, height);
   }
@@ -29,11 +33,18 @@ public class Player
   {
     xPos += dx;
     yPos += dy;
+
   }
 
   public void update()
   {
     xPos += xSpeed;
     yPos += ySpeed;
+    r2.setLocation((int) xPos, (int) yPos);
+  }
+
+  public Rectangle getPlayer()
+  {
+    return r2;
   }
 }
