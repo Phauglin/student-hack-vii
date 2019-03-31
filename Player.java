@@ -25,7 +25,7 @@ public class Player
     Graphics2D g2D = (Graphics2D) g;
     g.setColor(Color.WHITE);
     g2D.draw(r2);
-    g.setColor(Color.BLUE);
+    g.setColor(Color.WHITE);
     g.fillRect((int)xPos, (int)yPos, width, height);
   }
 
