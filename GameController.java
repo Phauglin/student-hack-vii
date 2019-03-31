@@ -20,8 +20,8 @@ public class GameController implements MouseListener, KeyListener
   {
     if(isColliding())
     {
-      o.xPos = (float)Math.random()*1280;
-      o.yPos = (float)Math.random()*720;
+      o.xPos = (float)Math.random()*1280 + (float)(0.5 * o.width);
+      o.yPos = (float)Math.random()*720 + (float)(0.5 * o.height);
       o.getObstacle().setLocation((int) o.xPos, (int) o.yPos);
       score++;
       // Added new implementation
@@ -77,7 +77,7 @@ public class GameController implements MouseListener, KeyListener
       p.ySpeed = 0;
     }
 
-    if((p.yPos > 720 - p.height) && p.ySpeed != 0)
+    if((p.yPos > 720 - p.height) && p.ySpeed < 1)
     {
       p.yPos = 720 - p.height;
       p.ySpeed = -p.ySpeed * 0.7f;
