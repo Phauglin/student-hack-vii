@@ -5,12 +5,15 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
+import java.awt.Font;
 
 public class GameController implements MouseListener, KeyListener
 {
 
   Player p = new Player();
   Obstacle o = new Obstacle();
+
+  private int score;
 
   public void update()
   {
@@ -19,6 +22,7 @@ public class GameController implements MouseListener, KeyListener
       o.xPos = (float)Math.random()*1280;
       o.yPos = (float)Math.random()*720;
       o.getObstacle().setLocation((int) o.xPos, (int) o.yPos);
+      score++;
     }
     //System.out.println(p.ySpeed);
     p.ySpeed += p.gravity;
@@ -89,6 +93,9 @@ public class GameController implements MouseListener, KeyListener
 
     p.render(g);
     o.render(g);
+
+    g.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+    g.drawString("Score: " + score, 10, 30);
   }
 
   @Override
