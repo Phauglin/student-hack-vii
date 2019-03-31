@@ -16,7 +16,7 @@ public class RenderLayer extends Canvas implements Runnable
 
   GameController gmc = new GameController();
 
-  ArrayList<Tom> enemies = new ArrayList<Tom>();
+  //ArrayList<Tom> enemies = new ArrayList<Tom>();
 
   public RenderLayer()
   {
@@ -26,7 +26,7 @@ public class RenderLayer extends Canvas implements Runnable
     this.addKeyListener(gmc);
     this.addMouseListener(gmc);
   }
-  
+
   @Override
   public void run()
   {
