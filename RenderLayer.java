@@ -1,5 +1,7 @@
 import java.awt.Canvas;
 import java.awt.Color;
+import java.awt.*;
+import javax.swing.*;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -20,11 +22,17 @@ public class RenderLayer extends Canvas implements Runnable
 
   public RenderLayer()
   {
+    JLabel background;
     super();
     this.setSize(1280, 720);
     time = System.currentTimeMillis();
     this.addKeyListener(gmc);
     this.addMouseListener(gmc);
+    ImageIcon img = new ImageIcon("");
+
+    background = new JLabel("", img, JLabel.CENTER);
+    background.setBounds(0, 0, 1280, 720);
+    add(background);
   }
 
   @Override
