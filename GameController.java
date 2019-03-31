@@ -97,7 +97,7 @@ public class GameController implements MouseListener, KeyListener
 
   public void render(Graphics g)
   {
-    g.setColor(Color.magenta);
+    g.setColor(Color.green);
     g.fillRect(0, 0, 1280, 720);
 
     p.render(g);
